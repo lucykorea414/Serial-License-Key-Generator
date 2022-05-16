@@ -13,5 +13,14 @@ namespace SerialKeyDemo
             generate.secretPhase = txtPassword.Text;
             txtSerial.Text = generate.doKey(Convert.ToInt32(txtDay.Text));
         }
+
+        private void btnValid_Click(object sender, EventArgs e)
+        {
+            SKGL.Validate validate = new SKGL.Validate();  
+            validate.secretPhase = txtPassword.Text;
+            validate.Key = txtSerial.Text;
+            txtStatus.Text = "Creation date: " + validate.CreationDate + "\r\n" + "Expire Date: " + validate.ExpireDate + "\r\n" + "Day left: " + validate.DaysLeft;
+
+        }
     }
 }

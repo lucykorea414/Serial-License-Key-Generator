@@ -124,6 +124,7 @@
             this.btnValid.TabIndex = 7;
             this.btnValid.Text = "Valid";
             this.btnValid.UseVisualStyleBackColor = true;
+            this.btnValid.Click += new System.EventHandler(this.btnValid_Click);
             // 
             // Form1
             // 
