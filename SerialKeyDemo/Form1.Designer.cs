@@ -61,6 +61,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(231, 14);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(207, 23);
             this.txtPassword.TabIndex = 0;
             // 
@@ -130,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 325);
+            this.ClientSize = new System.Drawing.Size(469, 325);
             this.Controls.Add(this.btnValid);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtStatus);
@@ -142,7 +143,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtDay);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Serial Key Generator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
