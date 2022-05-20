@@ -1,3 +1,5 @@
+
+
 namespace SerialKeyDemo
 {
     public partial class Form1 : Form
@@ -6,9 +8,9 @@ namespace SerialKeyDemo
         {
             InitializeComponent();
 
-            SKGL.Generate generate = new SKGL.Generate();
+            /*SKGL.Generate generate = new SKGL.Generate();
 
-            txtStatus.Text += "Machine Code: " + generate.MachineCode;
+            txtStatus.Text += "Machine Code: " + generate.MachineCode;*/
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
