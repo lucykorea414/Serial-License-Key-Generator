@@ -19,7 +19,10 @@ namespace SerialKeyDemo
             SKGL.Validate validate = new SKGL.Validate();  
             validate.secretPhase = txtPassword.Text;
             validate.Key = txtSerial.Text;
-            txtStatus.Text = "Creation date: " + validate.CreationDate + "\r\n" + "Expire Date: " + validate.ExpireDate + "\r\n" + "Day left: " + validate.DaysLeft;
+            txtStatus.Text = "Creation date: " + validate.CreationDate + "\r\n" + "Expire Date: " + validate.ExpireDate + "\r\n" + "Day left: " + validate.DaysLeft + "\r\n";
+            txtStatus.Text += "Check Validation: " + validate.IsValid + "\r\n";  
+            txtStatus.Text += "Check Expiration: " + validate.IsExpired + "\r\n";
+            /*txtStatus.Text = "Check Machine: " + validate.IsOnRightMachine + "\r\n"; */   
 
         }
     }
