@@ -22,8 +22,12 @@ namespace SerialKeyDemo
             txtStatus.Text = "Creation date: " + validate.CreationDate + "\r\n" + "Expire Date: " + validate.ExpireDate + "\r\n" + "Day left: " + validate.DaysLeft + "\r\n";
             txtStatus.Text += "Check Validation: " + validate.IsValid + "\r\n";  
             txtStatus.Text += "Check Expiration: " + validate.IsExpired + "\r\n";
-            /*txtStatus.Text = "Check Machine: " + validate.IsOnRightMachine + "\r\n"; */   
+            /*txtStatus.Text = "Check Machine: " + validate.IsOnRightMachine + "\r\n"; */
 
+            txtStatus.Text += "Check Expiration: " + validate.Key + "\r\n";
+            txtStatus.Text += "Check Expiration: " + validate.secretPhase + "\r\n";
+            
+            
         }
     }
 }
