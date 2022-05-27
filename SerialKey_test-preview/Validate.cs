@@ -31,5 +31,10 @@ namespace SerialKey_test_preview
         {
             return val.IsExpired;
         }
+
+        internal string val_daysleft()
+        {
+            return val.DaysLeft.ToString();
+        }
     }
 }

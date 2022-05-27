@@ -14,6 +14,8 @@ namespace SerialKey_test_preview
 
             chbMachineLock.Checked = false;
             chbViewPassword.Checked = false;
+            label_Error.Visible = false;
+            label_Valid.Visible = false;
         }
 
         private void dtpStart_ValueChanged(object sender, EventArgs e)
@@ -108,6 +110,42 @@ namespace SerialKey_test_preview
             //txtPassword.Text = UserID+UserPassword
             string serial = gen.generate_serialKey(txtPassword.Text, (int)numDaysLeft.Value);
             return serial;
+        }
+
+        private void vaildatemethod()
+        {
+            Validate val = new Validate(txtValSerialKey.Text, txtValPassword.Text);
+
+            if (val.val_isValid())
+            {
+                label_Error.Visible = false;
+                label_Valid.Visible = true;
+
+                txtCreationDate.Text = val.val_creation();
+                txtExpirationDate.Text = val.val_expiration();
+                txtTimeLeft.Text = val.val_daysleft();
+
+                if (val.val_isExpired())
+                {
+                    txtIsExpired.Text = "Expired";
+                }
+                else
+                {
+                    txtIsExpired.Text = "not Expired";
+                }
+
+            }
+            else
+            {
+                label_Error.Visible = true;
+                label_Valid.Visible = false;
+            }
+
+        }
+
+        private void btnValidate_Click(object sender, EventArgs e)
+        {
+            vaildatemethod();
         }
     }
 }

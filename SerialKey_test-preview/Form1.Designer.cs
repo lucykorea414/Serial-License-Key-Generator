@@ -391,6 +391,7 @@
             this.btnValidate.TabIndex = 4;
             this.btnValidate.Text = "Validate";
             this.btnValidate.UseVisualStyleBackColor = true;
+            this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
             // 
             // txtValSerialKey
             // 
