@@ -114,7 +114,7 @@ namespace SerialKey_test_preview
 
         private void vaildatemethod()
         {
-            Validate val = new Validate(txtValSerialKey.Text, txtValPassword.Text);
+            Validate val = new Validate(txtValPassword.Text, txtValSerialKey.Text);
 
             if (val.val_isValid())
             {
