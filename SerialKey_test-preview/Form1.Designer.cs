@@ -156,6 +156,7 @@
             // 
             // numAmountofKeys
             // 
+            this.numAmountofKeys.Enabled = false;
             this.numAmountofKeys.Location = new System.Drawing.Point(144, 62);
             this.numAmountofKeys.Maximum = new decimal(new int[] {
             999,

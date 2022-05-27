@@ -97,13 +97,15 @@ namespace SerialKey_test_preview
             }
             else
             {
-
+                //¾øÀ½
             }
         }
 
         private string generatemethod()
         {
             Generate gen = new Generate();
+
+            //txtPassword.Text = UserID+UserPassword
             string serial = gen.generate_serialKey(txtPassword.Text, (int)numDaysLeft.Value);
             return serial;
         }
