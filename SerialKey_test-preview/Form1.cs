@@ -74,7 +74,7 @@ namespace SerialKey_test_preview
         {
             if (chbViewPassword.Checked)
             {
-                txtPassword.PasswordChar = '\0';
+                txtPassword.PasswordChar = default(char);
             }
             else
             {
@@ -89,7 +89,10 @@ namespace SerialKey_test_preview
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            //key generate method ÇÊ¿ä
+            Generate gen = new Generate();
+            string serial = gen.generate_serialKey(txtPassword.Text, (int)numDaysLeft.Value);
+
+            txtSerialKey.Text = serial;
         }
     }
 }

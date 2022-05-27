@@ -32,6 +32,8 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabValidate = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtSerialKey = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.numAmountofKeys = new System.Windows.Forms.NumericUpDown();
@@ -52,9 +54,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtValPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnValidate = new System.Windows.Forms.Button();
-            this.txtSerialKey = new System.Windows.Forms.TextBox();
+            this.txtValSerialKey = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label_Error = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -67,8 +71,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabValidate.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -98,6 +100,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txtSerialKey);
+            this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -109,6 +113,22 @@
             this.tabPage1.Text = "Generate";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtSerialKey
+            // 
+            this.txtSerialKey.Location = new System.Drawing.Point(98, 271);
+            this.txtSerialKey.Name = "txtSerialKey";
+            this.txtSerialKey.Size = new System.Drawing.Size(387, 23);
+            this.txtSerialKey.TabIndex = 12;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(23, 274);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 15);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Serial Key : ";
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnGenerate);
@@ -119,14 +139,14 @@
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Location = new System.Drawing.Point(6, 150);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(500, 163);
+            this.groupBox4.Size = new System.Drawing.Size(500, 101);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Key Generate";
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(252, 97);
+            this.btnGenerate.Location = new System.Drawing.Point(281, 60);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(75, 23);
             this.btnGenerate.TabIndex = 5;
@@ -136,7 +156,7 @@
             // 
             // numAmountofKeys
             // 
-            this.numAmountofKeys.Location = new System.Drawing.Point(115, 99);
+            this.numAmountofKeys.Location = new System.Drawing.Point(144, 62);
             this.numAmountofKeys.Name = "numAmountofKeys";
             this.numAmountofKeys.Size = new System.Drawing.Size(120, 23);
             this.numAmountofKeys.TabIndex = 4;
@@ -145,7 +165,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 101);
+            this.label5.Location = new System.Drawing.Point(41, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 15);
             this.label5.TabIndex = 3;
@@ -154,7 +174,7 @@
             // chbViewPassword
             // 
             this.chbViewPassword.AutoSize = true;
-            this.chbViewPassword.Location = new System.Drawing.Point(346, 51);
+            this.chbViewPassword.Location = new System.Drawing.Point(375, 26);
             this.chbViewPassword.Name = "chbViewPassword";
             this.chbViewPassword.Size = new System.Drawing.Size(106, 19);
             this.chbViewPassword.TabIndex = 2;
@@ -164,7 +184,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(86, 47);
+            this.txtPassword.Location = new System.Drawing.Point(115, 22);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(241, 23);
@@ -173,7 +193,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 50);
+            this.label4.Location = new System.Drawing.Point(40, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 15);
             this.label4.TabIndex = 0;
@@ -312,15 +332,31 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.txtValPassword);
             this.groupBox6.Controls.Add(this.label6);
             this.groupBox6.Controls.Add(this.btnValidate);
-            this.groupBox6.Controls.Add(this.txtSerialKey);
+            this.groupBox6.Controls.Add(this.txtValSerialKey);
             this.groupBox6.Location = new System.Drawing.Point(6, 6);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(502, 96);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 58);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 15);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Password:";
+            // 
+            // txtValPassword
+            // 
+            this.txtValPassword.Location = new System.Drawing.Point(76, 55);
+            this.txtValPassword.Name = "txtValPassword";
+            this.txtValPassword.Size = new System.Drawing.Size(339, 23);
+            this.txtValPassword.TabIndex = 7;
             // 
             // label6
             // 
@@ -340,12 +376,12 @@
             this.btnValidate.Text = "Validate";
             this.btnValidate.UseVisualStyleBackColor = true;
             // 
-            // txtSerialKey
+            // txtValSerialKey
             // 
-            this.txtSerialKey.Location = new System.Drawing.Point(76, 16);
-            this.txtSerialKey.Name = "txtSerialKey";
-            this.txtSerialKey.Size = new System.Drawing.Size(420, 23);
-            this.txtSerialKey.TabIndex = 3;
+            this.txtValSerialKey.Location = new System.Drawing.Point(76, 16);
+            this.txtValSerialKey.Name = "txtValSerialKey";
+            this.txtValSerialKey.Size = new System.Drawing.Size(420, 23);
+            this.txtValSerialKey.TabIndex = 3;
             // 
             // groupBox5
             // 
@@ -463,22 +499,6 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Creation Date: ";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 58);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 15);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Password:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(76, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 23);
-            this.textBox1.TabIndex = 7;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -492,6 +512,7 @@
             this.Text = "Serial Key Test";
             this.tabValidate.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAmountofKeys)).EndInit();
@@ -538,7 +559,7 @@
         private GroupBox groupBox6;
         private Label label6;
         private Button btnValidate;
-        private TextBox txtSerialKey;
+        private TextBox txtValSerialKey;
         private GroupBox groupBox5;
         private Label label_Error;
         private Label label12;
@@ -552,6 +573,8 @@
         private Label label8;
         private Label label7;
         private Label label11;
-        private TextBox textBox1;
+        private TextBox txtValPassword;
+        private TextBox txtSerialKey;
+        private Label label13;
     }
 }
