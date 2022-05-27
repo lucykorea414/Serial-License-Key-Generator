@@ -32,13 +32,14 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabValidate = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtNewPassword = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtSerialKey = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.numAmountofKeys = new System.Windows.Forms.NumericUpDown();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.chbViewPassword = new System.Windows.Forms.CheckBox();
+            this.btnGenerate = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -71,10 +72,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.buttonValidate = new System.Windows.Forms.Button();
             this.tabValidate.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAmountofKeys)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -100,6 +101,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.buttonValidate);
+            this.tabPage1.Controls.Add(this.txtNewPassword);
+            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.txtSerialKey);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.groupBox4);
@@ -113,17 +117,33 @@
             this.tabPage1.Text = "Generate";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txtNewPassword
+            // 
+            this.txtNewPassword.Location = new System.Drawing.Point(98, 275);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Size = new System.Drawing.Size(283, 23);
+            this.txtNewPassword.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(23, 278);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 15);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Password : ";
+            // 
             // txtSerialKey
             // 
-            this.txtSerialKey.Location = new System.Drawing.Point(98, 271);
+            this.txtSerialKey.Location = new System.Drawing.Point(98, 231);
             this.txtSerialKey.Name = "txtSerialKey";
-            this.txtSerialKey.Size = new System.Drawing.Size(387, 23);
+            this.txtSerialKey.Size = new System.Drawing.Size(283, 23);
             this.txtSerialKey.TabIndex = 12;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(23, 274);
+            this.label13.Location = new System.Drawing.Point(23, 234);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 15);
             this.label13.TabIndex = 11;
@@ -131,85 +151,55 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.btnGenerate);
-            this.groupBox4.Controls.Add(this.numAmountofKeys);
+            this.groupBox4.Controls.Add(this.txtID);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.chbViewPassword);
+            this.groupBox4.Controls.Add(this.btnGenerate);
             this.groupBox4.Controls.Add(this.txtPassword);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Location = new System.Drawing.Point(6, 150);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(500, 101);
+            this.groupBox4.Size = new System.Drawing.Size(500, 58);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Key Generate";
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(41, 22);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(113, 23);
+            this.txtID.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 15);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "ID";
+            // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(281, 60);
+            this.btnGenerate.Location = new System.Drawing.Point(398, 22);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerate.Size = new System.Drawing.Size(84, 23);
             this.btnGenerate.TabIndex = 5;
             this.btnGenerate.Text = "Generate";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
-            // numAmountofKeys
-            // 
-            this.numAmountofKeys.Enabled = false;
-            this.numAmountofKeys.Location = new System.Drawing.Point(144, 62);
-            this.numAmountofKeys.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numAmountofKeys.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numAmountofKeys.Name = "numAmountofKeys";
-            this.numAmountofKeys.Size = new System.Drawing.Size(120, 23);
-            this.numAmountofKeys.TabIndex = 4;
-            this.numAmountofKeys.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numAmountofKeys.ValueChanged += new System.EventHandler(this.numAmountofKeys_ValueChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 15);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Amount of Keys";
-            // 
-            // chbViewPassword
-            // 
-            this.chbViewPassword.AutoSize = true;
-            this.chbViewPassword.Location = new System.Drawing.Point(375, 26);
-            this.chbViewPassword.Name = "chbViewPassword";
-            this.chbViewPassword.Size = new System.Drawing.Size(106, 19);
-            this.chbViewPassword.TabIndex = 2;
-            this.chbViewPassword.Text = "View password";
-            this.chbViewPassword.UseVisualStyleBackColor = true;
-            this.chbViewPassword.CheckedChanged += new System.EventHandler(this.chbViewPassword_CheckedChanged);
-            // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(115, 22);
+            this.txtPassword.Location = new System.Drawing.Point(233, 22);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(241, 23);
+            this.txtPassword.Size = new System.Drawing.Size(142, 23);
             this.txtPassword.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 25);
+            this.label4.Location = new System.Drawing.Point(170, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 15);
             this.label4.TabIndex = 0;
@@ -516,6 +506,16 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Creation Date: ";
             // 
+            // buttonValidate
+            // 
+            this.buttonValidate.Location = new System.Drawing.Point(404, 274);
+            this.buttonValidate.Name = "buttonValidate";
+            this.buttonValidate.Size = new System.Drawing.Size(84, 23);
+            this.buttonValidate.TabIndex = 8;
+            this.buttonValidate.Text = "Validate";
+            this.buttonValidate.UseVisualStyleBackColor = true;
+            this.buttonValidate.Click += new System.EventHandler(this.buttonValidate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -532,7 +532,6 @@
             this.tabPage1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAmountofKeys)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -556,9 +555,6 @@
         private TabPage tabPage1;
         private GroupBox groupBox4;
         private Button btnGenerate;
-        private NumericUpDown numAmountofKeys;
-        private Label label5;
-        private CheckBox chbViewPassword;
         private TextBox txtPassword;
         private Label label4;
         private GroupBox groupBox2;
@@ -593,5 +589,10 @@
         private TextBox txtValPassword;
         private TextBox txtSerialKey;
         private Label label13;
+        private TextBox txtID;
+        private Label label5;
+        private TextBox txtNewPassword;
+        private Label label14;
+        private Button buttonValidate;
     }
 }

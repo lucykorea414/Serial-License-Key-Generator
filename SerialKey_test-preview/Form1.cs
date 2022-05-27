@@ -2,7 +2,6 @@ namespace SerialKey_test_preview
 {
     public partial class Form1 : Form
     {
-        int NumofKey;
         public Form1()
         {
             InitializeComponent();
@@ -10,10 +9,8 @@ namespace SerialKey_test_preview
             dtpStart.Value = DateTime.Now;
             dtpEnd.Value = DateTime.Now;
             numDaysLeft.Value = 0;
-            NumofKey = (int)numAmountofKeys.Value;
 
             chbMachineLock.Checked = false;
-            chbViewPassword.Checked = false;
             label_Error.Visible = false;
             label_Valid.Visible = false;
         }
@@ -74,42 +71,25 @@ namespace SerialKey_test_preview
             }
         }
 
-        private void chbViewPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chbViewPassword.Checked)
-            {
-                txtPassword.PasswordChar = default(char);
-            }
-            else
-            {
-                txtPassword.PasswordChar = '*';
-            }
-        }
-
-        private void numAmountofKeys_ValueChanged(object sender, EventArgs e)
-        {
-            NumofKey = (int)numAmountofKeys.Value;
-        }
-
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            if(NumofKey == 1)
-            {
-                txtSerialKey.Text = generatemethod();
-            }
-            else
-            {
-                //¾øÀ½
-            }
+            txtNewPassword.Text = generatepassword(txtID.Text, txtPassword.Text);
+            txtSerialKey.Text = generatemethod(txtNewPassword.Text, (int)numDaysLeft.Value);
         }
 
-        private string generatemethod()
+        private string generatemethod(string newpassword, int num)
         {
             Generate gen = new Generate();
 
-            //txtPassword.Text = UserID+UserPassword
-            string serial = gen.generate_serialKey(txtPassword.Text, (int)numDaysLeft.Value);
+            string serial = gen.generate_serialKey(newpassword, num);
             return serial;
+        }
+
+        private string generatepassword(string id, string password)
+        {
+            Generate gen = new Generate();
+
+            return gen.generate_password(id, password);
         }
 
         private void vaildatemethod()
@@ -146,6 +126,13 @@ namespace SerialKey_test_preview
         private void btnValidate_Click(object sender, EventArgs e)
         {
             vaildatemethod();
+        }
+
+        private void buttonValidate_Click(object sender, EventArgs e)
+        {
+            txtValSerialKey.Text = txtSerialKey.Text;
+            txtValPassword.Text = txtNewPassword.Text;
+            tabValidate.SelectTab(1);
         }
     }
 }
