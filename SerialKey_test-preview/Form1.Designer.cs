@@ -157,9 +157,24 @@
             // numAmountofKeys
             // 
             this.numAmountofKeys.Location = new System.Drawing.Point(144, 62);
+            this.numAmountofKeys.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numAmountofKeys.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numAmountofKeys.Name = "numAmountofKeys";
             this.numAmountofKeys.Size = new System.Drawing.Size(120, 23);
             this.numAmountofKeys.TabIndex = 4;
+            this.numAmountofKeys.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numAmountofKeys.ValueChanged += new System.EventHandler(this.numAmountofKeys_ValueChanged);
             // 
             // label5

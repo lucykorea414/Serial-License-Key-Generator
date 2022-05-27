@@ -2,6 +2,7 @@ namespace SerialKey_test_preview
 {
     public partial class Form1 : Form
     {
+        int NumofKey;
         public Form1()
         {
             InitializeComponent();
@@ -9,6 +10,7 @@ namespace SerialKey_test_preview
             dtpStart.Value = DateTime.Now;
             dtpEnd.Value = DateTime.Now;
             numDaysLeft.Value = 0;
+            NumofKey = (int)numAmountofKeys.Value;
 
             chbMachineLock.Checked = false;
             chbViewPassword.Checked = false;
@@ -84,15 +86,26 @@ namespace SerialKey_test_preview
 
         private void numAmountofKeys_ValueChanged(object sender, EventArgs e)
         {
-
+            NumofKey = (int)numAmountofKeys.Value;
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            if(NumofKey == 1)
+            {
+                txtSerialKey.Text = generatemethod();
+            }
+            else
+            {
+
+            }
+        }
+
+        private string generatemethod()
+        {
             Generate gen = new Generate();
             string serial = gen.generate_serialKey(txtPassword.Text, (int)numDaysLeft.Value);
-
-            txtSerialKey.Text = serial;
+            return serial;
         }
     }
 }
