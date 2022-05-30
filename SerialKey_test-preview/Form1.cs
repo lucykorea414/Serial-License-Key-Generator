@@ -133,6 +133,7 @@ namespace SerialKey_test_preview
             txtValSerialKey.Text = txtSerialKey.Text;
             txtValPassword.Text = txtNewPassword.Text;
             tabValidate.SelectTab(1);
+            btnValidate_Click(sender, e);
         }
     }
 }
